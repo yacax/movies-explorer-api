@@ -17,7 +17,7 @@ The project repository is located at: [https://github.com/yacax/movies-explorer-
 
 # Deployment
 
-- Backend (API): [api.tarantino.nomoredomains.work](http://api.tarantino.nomoredomains.work)
-- Frontend: [tarantino.nomoredomains.work](http://tarantino.nomoredomains.work) (Under development)
+- Backend (API): [api.tarantino.nomoredomains.work](https://api.tarantino.nomoredomains.work)
+- Frontend: [tarantino.nomoredomains.work](https://tarantino.nomoredomains.work) (Under development)
 
 
