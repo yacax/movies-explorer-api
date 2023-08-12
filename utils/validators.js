@@ -64,7 +64,6 @@ module.exports.validateCreateMovie = celebrate({
   body: Joi
     .object()
     .keys({
-
       country: Joi
         .string()
         .required(),
@@ -92,15 +91,6 @@ module.exports.validateCreateMovie = celebrate({
         .string()
         .required()
         .pattern(regexPatterns.link),
-      owner: Joi
-        .string()
-        .required()
-        .custom((value, helpers) => {
-          if (!ObjectId.isValid(value)) {
-            return helpers.error('Invalid owner id');
-          }
-          return value;
-        }, 'custom validation'),
       movieId: Joi
         .number()
         .required(),

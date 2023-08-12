@@ -53,6 +53,7 @@ module.exports.createMovie = (req, res, next) => {
 module.exports.deleteMovie = (req, res, next) => {
   const { _id: movieMongoId } = req.params;
   const { _id: userId } = req.user;
+
   Movie.findById(movieMongoId)
     .then((movie) => {
       if (!movie) {
@@ -61,7 +62,7 @@ module.exports.deleteMovie = (req, res, next) => {
       if (movie.owner.toString() !== userId) {
         throw new NoRightsToTheOperation();
       }
-      return Movie.deleteOne();
+      return Movie.deleteOne({ _id: movieMongoId });
     })
     .then((movie) => {
       res.send({ data: movie });
